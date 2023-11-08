@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>WEBDEVS - Home</title>
+</head>
+<body>
+    <header>
+		<div id="head-title">WEBDEVS</div>
+		<nav class="nav-links" id="main-nav-links">
+			<ul>
+				<li class="active-page"><a href="#">Home</a></li>
+				<li><a href="#">Arabic Blog</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+			</ul>
+		</nav>
+		<a id="menu-icon" href="javascript:void(0);">
+			<span  class="material-symbols-outlined">
+				menu
+			</span>
+		</a>
+	</header>
+	<div id="hidden-menu">
+		<nav class="nav-links" id="menu-nav-links">
+			<ul>
+				<li class="active-page"><a href="#">Home</a></li>
+				<li><a href="#">Arabic Blog</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="sidebar">
+		<button onclick="close_side()" class="bar-button"><span id="close">Close</span><i class="fa-solid fa-chevron-left"></i></button>
+		<ul>
+			<li><a href="#hero-section">Main</a></li>
+			<li><a href="#about-section">Who Are We</a></li>
+		</ul>
+	</div>
+	<main>
+		<section id="hero-section">
+			<div class="hero-content">
+				<h2 id="main-title">
+					the new gen of web developers
+				</h2>
+				<p id="main-description">This website is a sample of what we're capable of doing, from a simple blog page to a fully functioning e-commerce website, there is nothing we can't do!</p>
+			</div>
+			<div class="hero-image">
+				<a href="#about-section"><img src="images/hero-image.png" alt=""></a>
+			</div>
+		</section>
+		<section id="about-section">
+				<div id="about-description">
+					<h2>
+						Who are we?
+					</h2>
+					<br>
+					<p>
+						Two computer enthusiasts, both pursuing our Bachelor's degrees in Computer Science at the esteemed Holy Spirit University of Kaslik (USEK). We have distinguished ourselves as dedicated and passionate scholars in the field of computer science. Our academic journey has been marked by a relentless pursuit of knowledge, an unwavering commitment to excellence, and a deep-seated curiosity that has propelled us to explore the intricate realms of this ever-evolving discipline.
+					</p>
+					<p>
+						Our collaboration extends beyond the classroom, where we have undertaken various projects, delving into the realms of software development, artificial intelligence, and cutting-edge technologies.
+					</p>
+					<a href="portfolio.html"><button>Check us out</button></a>
+				</div>
+		</section>
+		
+	</main>
+
+	<footer>
+		copyright &copy;2023, All Rights Reserved
+	</footer>
+
+	<a href="#">
+		<button id="return-to-top">
+			<span class="material-symbols-outlined">
+				arrow_upward
+			</span>
+		</button>
+	</a>
+
+	<script src="https://kit.fontawesome.com/9c8069e5f8.js" crossorigin="anonymous"></script>
+	<script src="scripts/background.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>	
+	<script src="scripts/mainApp.js"></script>
+</body>
+</html>
