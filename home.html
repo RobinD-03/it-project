@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="main-style.css">
+	<link rel="stylesheet" href="home-style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>WEBDEVS - Home</title>
 </head>
@@ -32,39 +33,75 @@
 			</ul>
 		</nav>
 	</div>
-	<div class="sidebar">
-		<button onclick="close_side()" class="bar-button"><span id="close">Close</span><i class="fa-solid fa-chevron-left"></i></button>
+	<button id="side-button" onclick="toggle_sidebar()"><i class="fa-solid fa-chevron-right"></i></button>
+	<div class="sidebar sidebar-close">
 		<ul>
 			<li><a href="#hero-section">Main</a></li>
 			<li><a href="#about-section">Who Are We</a></li>
+			<li><a href="#read-section">Articles To Read</a></li>
 		</ul>
 	</div>
 	<main>
 		<section id="hero-section">
-			<div class="hero-content">
-				<h2 id="main-title">
-					the new gen of web developers
-				</h2>
-				<p id="main-description">This website is a sample of what we're capable of doing, from a simple blog page to a fully functioning e-commerce website, there is nothing we can't do!</p>
-			</div>
-			<div class="hero-image">
-				<a href="#about-section"><img src="images/hero-image.png" alt=""></a>
-			</div>
+			<div id="hero-wrapper">
+				<div class="hero-content">
+					<h2 id="main-title">
+						the new gen of web developers
+					</h2>
+					<p id="main-description">This website is a sample of what we're capable of doing, from a simple blog page to a fully functioning e-commerce website, there is nothing we can't do!</p>
+				</div>
+				<div class="hero-image">
+					<a href="#about-section"><img src="images/hero-image.png" alt=""></a>
+				</div>
+			</div>	
 		</section>
 		<section id="about-section">
+			<h2>
+				Who are we?
+			</h2>
+			
+			<div id="about-wrapper">
+				
 				<div id="about-description">
-					<h2>
-						Who are we?
-					</h2>
-					<br>
 					<p>
 						Two computer enthusiasts, both pursuing our Bachelor's degrees in Computer Science at the esteemed Holy Spirit University of Kaslik (USEK). We have distinguished ourselves as dedicated and passionate scholars in the field of computer science. Our academic journey has been marked by a relentless pursuit of knowledge, an unwavering commitment to excellence, and a deep-seated curiosity that has propelled us to explore the intricate realms of this ever-evolving discipline.
 					</p>
 					<p>
 						Our collaboration extends beyond the classroom, where we have undertaken various projects, delving into the realms of software development, artificial intelligence, and cutting-edge technologies.
 					</p>
-					<a href="portfolio.html"><button>Check us out</button></a>
+					<a id="about-button" href="portfolio.html"><button>Check us out</button></a>
 				</div>
+				<span id="about-icon" class="material-symbols-outlined">
+					group
+				</span>
+			</div>
+		</section>
+
+		<section id="read-section">
+			<h2>Some Interesting Articles To Read</h2>
+			<div id="articles">
+				<article id="internet" class="hidden">
+					<h3>Internet Infrastructure</h3>
+					<p>
+						Learn about the infrastructure of the internet
+					</p>
+					<a href="">Learn more ></a>
+				</article>
+				<article id="web" class="hidden">
+					<h3>History of the Web</h3>
+					<p>
+						Learn about the infrastructure of the internet
+					</p>
+					<a href="">Learn more ></a>
+				</article>
+				<article id="statistics" class="hidden">
+					<h3>Internet statistics - Middle East and Lebanon</h3>
+					<p>
+						Learn about the infrastructure of the internet
+					</p>
+					<a href="">Learn more ></a>
+				</article>
+			</div>
 		</section>
 		
 	</main>
@@ -86,5 +123,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>	
 	<script src="scripts/mainApp.js"></script>
+	<script src="scripts/home-app.js"></script>
 </body>
 </html>

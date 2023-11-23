@@ -9,6 +9,7 @@ html{
     scroll-behavior: smooth;
     scrollbar-color: #a7a7a7 #a7a7a78e;
 	scrollbar-width: thin;
+    scroll-padding-top: 5rem;
 }
 
 ::-webkit-scrollbar {
@@ -27,6 +28,7 @@ body{
     padding: 0;
     font-size: 20px;
     position: relative;
+    line-height: 1.5;
 }
 
 header{
@@ -37,15 +39,16 @@ header{
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    height: 4rem;
+    height: 5rem;
     top:0;
-    z-index: 10;
+    z-index: 1100;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 #head-title{
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: .7rem;
+    font-weight: 400;
 }
 
 .nav-links ul{
@@ -56,8 +59,9 @@ header{
 
 .nav-links ul li{
     list-style: none;
-    height: 4rem;
-    line-height: 2rem;
+    height: 5rem;
+    line-height: 3rem;
+    transition: all .2s linear;
 }
 
 .nav-links ul li a{
@@ -68,71 +72,89 @@ header{
 }
 
 .nav-links ul li:hover, .nav-links ul li:focus{
-    background-color:#555;
+    text-shadow: 0px 0px 10px hsl(0, 0%, 19%);
 }
 
 #menu-icon{
     display:none;
     color:black;
-    margin-right: .5rem;
+    margin-right: 1rem;
+}
+
+.material-symbols-outlined{
+    font-size: 2rem !important; 
 }
 
 main{
-    margin-top: 4rem;
-}
-
-#hero-section{
-    min-height: calc(100vh - 4rem);
-    display: flex;
-    padding: 0 3rem 3rem 3rem;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-.hero-content{
-    width: 50%;
-}
-
-#main-title{
-    text-transform: uppercase;
-    font-size: 3rem;
-    width:100%;
-}
-
-#main-description{
-    width:100%;
-}
-
-.hero-image{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    min-height: calc(100vh - 7rem);
-    width: 50%;
-    /* border-top: 5px solid #E6E6E6; */
-}
-
-.hero-image img{
-    width: 100%;
-    height: auto;
+    margin-top: 5rem;
 }
 
 .sidebar{
-    display:none;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    z-index: 15;
+    height: 100%;
+    background-color: white;
+    width: 12rem;
+    border-right: 1px solid black;
+}
+
+.sidebar-open{
+    transform: translateX(0%);
+    transition: all .3s linear;
+}
+
+.sidebar-close{
+    transform: translateX(-100%);
+    transition: all .3s linear;
+}
+
+.sidebar ul{
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+}
+
+.sidebar ul li{
+    text-align: center;
+    padding: 3rem 0;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+#side-button{
+    position: fixed;
+    z-index: 10;
+    cursor: pointer;
+    top: 50%;
+    height: 8rem;
+    transition: all .3s linear;
+    border: 1px solid black;
+    border-left: none;
+    width: 1.3rem;
+    background-color: white;
+    border-radius: 0 10px 10px 0;
 }
 
 #hidden-menu {
-    display: none;  /* Initially hide the element */
+    display: none;
     position: fixed;
-    top: 4rem;  /* Initially set the top position to 0 */
+    top: 5rem;
     left: 0;
     right: 0;
     z-index: 5;
     background-color: white;
     width: 100%;
-    animation-duration: 0.5s; /* Animation duration */
-    animation-timing-function: ease;  /* Add a transition for the 'top' property */
+    animation-duration: 0.5s;
+    animation-timing-function: ease; 
 }
 
 footer{
@@ -159,6 +181,25 @@ footer{
     backdrop-filter: blur(10px);
 }
 
+.hidden{
+    opacity:0;
+    filter: blur(5px);
+    transform: translatex(-100%);
+
+}
+
+.show{
+    opacity:1;
+    filter:blur(0px);
+    transform: translateY(0);
+    transition: all 1s;
+}
+
+.fa-chevron-right-closing{
+    transform: rotate(180deg);
+    transition: all .3s linear;
+}
+
 /*Hamburger menu animations*/
 @keyframes slideDown {
     from {
@@ -178,7 +219,6 @@ footer{
     }
 }
 /*End of Hamburger menu animations*/
-
 
 @media only screen and (max-width:768px){
 
@@ -200,31 +240,6 @@ footer{
     #menu-nav-links ul{
         flex-direction: column;
         text-align: center;
-    }
-
-    #hero-section{
-        flex-direction: column;
-    }
-
-    .hero-content{
-        width:100%;
-        margin-bottom: 2rem;
-        min-height: 50%;
-    }
-
-    .hero-image{
-        border-top: 3px solid #E6E6E6;
-        width:100%;
-        min-height: 50%;
-    }
-
-    #main-title{
-        font-size:2.5rem;
-        width:100%;
-    }
-
-    #main-description{
-        width:100%;
     }
 
     footer{
