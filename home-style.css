@@ -110,15 +110,17 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
 }
 
 #articles article{
     margin:1rem;
     width: 30rem;
-    min-height: 20rem;
-    background-color: #b8b7b7;
+    min-height: 35rem;
+    background-color: hsla(0, 0%, 42%, 0.288);
     border-radius: 1rem;
     padding: 1rem;
+    backdrop-filter: blur(10px);
 }
 
 #web{
@@ -127,6 +129,12 @@
 
 #statistics{
     transition-delay: 400ms;
+}
+
+.read-image{
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
 }
 
 @keyframes glow {
@@ -177,5 +185,6 @@
 
     #about-description{
         width: 100%;
+        margin-right: 0;
     }
 }
