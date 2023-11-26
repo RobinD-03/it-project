@@ -214,6 +214,10 @@ footer{
     transition: transform 0.3s ease;
 }
 
+.active-page{
+    border-bottom: 3px solid rgb(0, 0, 0);
+}
+
 @media only screen and (max-width:768px){
 
     body{
@@ -231,6 +235,10 @@ footer{
     #menu-nav-links ul{
         flex-direction: column;
         text-align: center;
+    }
+
+    .active-page-hidden a{
+        text-decoration: underline solid black !important;
     }
 
     footer{

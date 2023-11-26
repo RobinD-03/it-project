@@ -39,6 +39,7 @@ figure{
     align-items: center;
     justify-content: center;
     background-color: #72727233;
+    border-radius: 1rem;
 }
 
 #definition{
@@ -51,4 +52,11 @@ figure img{
 
 figcaption{
     font-size: 1rem;
+}
+
+@media only screen and (max-width:768px){
+    figure img{
+        width: 100%;
+        height: auto;
+    }
 }

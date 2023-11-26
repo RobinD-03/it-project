@@ -127,6 +127,10 @@
     cursor: pointer;
 }
 
+#articles article:hover, #articles article:focus{
+    box-shadow: 3px 3px 10px #646464;
+}
+
 #articles a{
     color: black;
     text-decoration: none;
