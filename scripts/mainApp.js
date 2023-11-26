@@ -10,7 +10,7 @@ const topButton = document.getElementById('return-to-top');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 150) {
-        topButton.style.display = 'block';
+        topButton.style.display = 'flex';
     } else {
         topButton.style.display = 'none';
     }

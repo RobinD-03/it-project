@@ -42,7 +42,7 @@ figure{
     border-radius: 1rem;
 }
 
-#definition{
+.change-back{
     background-color: #72727233;
 }
 
@@ -50,7 +50,7 @@ figure img{
     width: 60%;
 }
 
-figcaption{
+#caption{
     font-size: 1rem;
 }
 

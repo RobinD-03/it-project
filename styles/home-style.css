@@ -79,16 +79,18 @@
     font-size: 10rem !important;
 }
 
-#about-button button{
+#about-button{
     font-size: 1rem;
     padding: 1rem;
     border: 1px solid black;
     background-color: white;
     cursor: pointer;
     transition: all .2s linear;
+    color: black;
+    text-decoration: none;
 }
 
-#about-button button:hover, #about-button button:focus{
+#about-button:hover, #about-button:focus{
     box-shadow: 3px 3px 10px #b8b7b7;
 }
 

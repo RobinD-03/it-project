@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/main-style.css">
+	<link rel="stylesheet" href="../styles/articles-pages.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <title>WEBDEVS</title>
+</head>
+<body>
+    <header>
+		<div id="head-title">WEBDEVS</div>
+		<nav class="nav-links" id="main-nav-links">
+			<ul>
+				<li><a href="../home.html">Home</a></li>
+				<li><a href="#">Arabic Blog</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+			</ul>
+		</nav>
+		<a id="menu-icon" href="javascript:void(0);">
+			<span  class="material-symbols-outlined">
+				menu
+			</span>
+		</a>
+	</header>
+	<div id="hidden-menu" class="ham-menu-closed">
+		<nav class="nav-links" id="menu-nav-links">
+			<ul>
+				<li><a href="../home.html">Home</a></li>
+				<li><a href="#">Arabic Blog</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+			</ul>
+		</nav>
+	</div>
+	<button id="side-button" onclick="toggle_sidebar()"><i class="fa-solid fa-chevron-right"></i></button>
+	<div class="sidebar sidebar-close">
+		<ul>
+			<li><a href="#definition">Internet Definition</a></li>
+			<li><a href="#beginning">How it Works</a></li>
+			<li><a href="#communication">How do we Communicate</a></li>
+			<li><a href="#references">References</a></li>
+			<li id="back-home"><a href="../home.html#read-section">Back Home</a></li>
+		</ul>
+	</div>
+	<main>
+		<h1>Infrastructure of the Internet</h1>
+		<article class="change-back" id="definition">
+			<h2>What is the Internet</h2>
+			<p>The Internet is a global network of billions of computers and other electronic devices. With the Internet, it's possible to access almost any information, communicate with anyone else in the world, and do much more. You can do all of this by connecting a computer to the Internet, which is also called going online.</p>
+		</article>
+		<article id="beginning">
+			<h2>How does it Work</h2>
+			<p>The Internet relies on the Transmission Control Protocol (TCP) and Internet Protocol (IP) to ensure data integrity and facilitate routing. When you access a website or send an email, your device breaks down the information into packets, which travel across the Internet, reaching their destination through a series of routers. At the destination, the packets are reassembled to provide the requested information. Key components include servers, routers, and network infrastructure, all working together to enable the exchange of data worldwide.</p>
+			<figure>
+				<img src="../images/internet-diagram.png" alt="Tim Berners-Lee">
+			</figure>
+			<p id="caption">A simple diagram of how the internet works.</p>
+		</article>
+        <article id="communication">
+            <h2>How do we communicate from two different ends of the world</h2>
+            <p>Communicating from two different ends of the world is facilitated by the global interconnection of devices through the Internet. Here's a simplified overview:</p>
+            <ol>
+                <li><strong>Data Transmission:</strong> Information, such as text, images, or video, is converted into digital data.</li>
+                <li><strong>Internet Infrastructure:</strong> The data is then broken into packets and sent over the Internet. The Internet is a vast network of interconnected servers, routers, and data cables that span the globe.</li>
+                <li><strong>Routing:</strong> Routers on the Internet help direct the packets from the source to the destination. These routers are responsible for determining the most efficient path for the data to travel.</li>
+                <li><strong>Reception:</strong>  The data packets arrive at their destination, where they are reassembled into the original information.</li>
+                <li><strong>User Interface: </strong> The recipient accesses the information through their device, such as a computer or smartphone.</li>
+            </ol>
+            <p>This entire process occurs within a fraction of a second, allowing near-instantaneous communication between two distant points on the planet. Technologies like email, video calls, and instant messaging leverage this global network to connect people worldwide.</p>
+        </article>
+		<section id="references">
+			<h3>References:</h3>
+			<ol>
+				<li>How does the internet Work <a href="https://www.cloudflare.com/learning/network-layer/how-does-the-internet-work/" target="_blank">https://www.cloudflare.com/learning/network-layer/how-does-the-internet-work/</a></li>
+				<li>OpenAI ChatGPT <a href="https://chat.openai.com/" target="_blank">https://chat.openai.com/</a></li>
+			</ol>
+		</section>
+	</main>
+
+	<footer>
+		copyright &copy;2023, All Rights Reserved
+	</footer>
+
+	<a id="return-to-top" href="#">
+		<span class="material-symbols-outlined">
+			arrow_upward
+		</span>
+	</a>
+
+	<script src="https://kit.fontawesome.com/9c8069e5f8.js" crossorigin="anonymous"></script>
+	<script src="../scripts/mainApp.js"></script>
+</body>
+</html>

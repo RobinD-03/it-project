@@ -122,6 +122,9 @@ main{
     list-style: none;
     width: 100%;
     margin: 0;
+    height: calc(100% - 5rem);
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar ul li{
@@ -129,6 +132,12 @@ main{
     padding: 3rem 0;
     width: 100%;
     border-bottom: 1px solid black;
+}
+
+#back-home{
+    border-top: 1px solid black;
+    padding: 3rem 0 !important;
+    margin-top: auto;
 }
 
 .sidebar ul li a{
@@ -183,13 +192,17 @@ footer{
     border: none;
     background-color: hsla(0, 0%, 42%, 0.288);
     backdrop-filter: blur(10px);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .hidden{
     opacity:0;
     filter: blur(5px);
     transform: translatex(-100%);
-
 }
 
 .show{
@@ -218,6 +231,7 @@ footer{
     border-bottom: 3px solid rgb(0, 0, 0);
 }
 
+
 @media only screen and (max-width:768px){
 
     body{
@@ -239,6 +253,10 @@ footer{
 
     .active-page-hidden a{
         text-decoration: underline solid black !important;
+    }
+
+    #back-home{
+        padding: .2rem .5rem;
     }
 
     footer{
