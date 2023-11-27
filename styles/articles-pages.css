@@ -8,14 +8,12 @@ main{
 
 article{
     width: 80%;
-    text-align: justify;
     padding: 1rem;
     border-radius: 1rem;
 }
 
 section{
     width: 80%;
-    text-align: justify;
     color: #727272;
     font-style: italic;
     padding: 1rem;
@@ -24,9 +22,22 @@ section{
     margin-bottom: 2rem;
 }
 
+p{
+    text-align: justify;
+}
+
 section h3{
     color: black;
     font-style: normal;
+}
+
+ol{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+ol li{
+    text-align: left;
 }
 
 section a{
