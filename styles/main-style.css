@@ -191,7 +191,6 @@ footer{
     background-color: hsla(0, 0%, 42%, 0.288);
     backdrop-filter: blur(10px);
     color: black;
-    display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
