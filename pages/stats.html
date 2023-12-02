@@ -14,9 +14,10 @@
 		<div id="head-title">WEBDEVS</div>
 		<nav class="nav-links" id="main-nav-links">
 			<ul>
-				<li><a href="../index.html">Home</a></li>
+				<li class="active-page"><a href="#">Home</a></li>
 				<li><a href="#">Arabic Blog</a></li>
 				<li><a href="/pages/portfolio.html">Portfolio</a></li>
+				<li><a href="pages/schedule.html">Schedule</a></li>
 			</ul>
 		</nav>
 		<a id="menu-icon" href="javascript:void(0);">
@@ -28,54 +29,44 @@
 	<div id="hidden-menu" class="ham-menu-closed">
 		<nav class="nav-links" id="menu-nav-links">
 			<ul>
-				<li><a href="../index.html">Home</a></li>
+				<li class="active-page-hidden"><a href="#">Home</a></li>
 				<li><a href="#">Arabic Blog</a></li>
-				<li><a href="/pages/portfolio.html">Portfolio</a></li>
+				<li><a href="pages/portfolio.html">Portfolio</a></li>
+				<li><a href="pages/schedule.html">Schedule</a></li>
 			</ul>
 		</nav>
 	</div>
 	<button id="side-button" onclick="toggle_sidebar()"><i class="fa-solid fa-chevron-right"></i></button>
 	<div class="sidebar sidebar-close">
 		<ul>
-			<li><a href="#definition">Internet Definition</a></li>
-			<li><a href="#beginning">How it Works</a></li>
-			<li><a href="#communication">How do we Communicate</a></li>
-			<li><a href="#references">References</a></li>
+			<li><a href="#lebanon">Lebanon</a></li>
+			<li><a href="#me">Middle East</a></li>
 			<li id="back-home"><a href="../index.html#read-section">Back Home</a></li>
 		</ul>
 	</div>
 	<main>
-		<h1>Infrastructure of the Internet</h1>
-		<article class="change-back" id="stats-table">
+		<h1>Internet Statistics Lebanon - Middle East</h1>
+		<article class="change-back" id="lebanon">
+			<h2>Lebanon</h2>
+			<ol>
+				<li><strong>Internet Penetration: </strong>Internet penetration in Lebanon was relatively high, with a significant percentage of the population having access to the internet.</li>
+				<li><strong>Mobile Internet:</strong> Mobile internet usage was widespread, and a considerable portion of internet users accessed the web through mobile devices.</li>
+				<li><strong>Social Media:</strong> Social media platforms were popular in Lebanon, with many people actively using platforms such as Facebook, Instagram, and Twitter.</li>
+			</ol>
 			
 		</article>
-		<article id="beginning">
-			<h2>How does it Work</h2>
-			<p>The Internet relies on the Transmission Control Protocol (TCP) and Internet Protocol (IP) to ensure data integrity and facilitate routing. When you access a website or send an email, your device breaks down the information into packets, which travel across the Internet, reaching their destination through a series of routers. At the destination, the packets are reassembled to provide the requested information. Key components include servers, routers, and network infrastructure, all working together to enable the exchange of data worldwide.</p>
-			<figure>
-				<img src="../images/internet-diagram.png" alt="Tim Berners-Lee">
-			</figure>
-			<p id="caption">A simple diagram of how the internet works.</p>
-		</article>
-        <article id="communication">
-            <h2>How do we communicate from two different ends of the world</h2>
-            <p>Communicating from two different ends of the world is facilitated by the global interconnection of devices through the Internet. Here's a simplified overview:</p>
+		
+        <article id="me">
+			
+            <h2>Middle East</h2>
             <ol>
-                <li><strong>Data Transmission:</strong> Information, such as text, images, or video, is converted into digital data.</li>
-                <li><strong>Internet Infrastructure:</strong> The data is then broken into packets and sent over the Internet. The Internet is a vast network of interconnected servers, routers, and data cables that span the globe.</li>
-                <li><strong>Routing:</strong> Routers on the Internet help direct the packets from the source to the destination. These routers are responsible for determining the most efficient path for the data to travel.</li>
-                <li><strong>Reception:</strong>  The data packets arrive at their destination, where they are reassembled into the original information.</li>
-                <li><strong>User Interface: </strong> The recipient accesses the information through their device, such as a computer or smartphone.</li>
+                <li><strong>Internet Penetration: </strong>Internet penetration in the Middle East varied across countries, with some nations having higher rates than others. Generally, there was a growing trend of increased internet connectivity.</li>
+                <li><strong>Mobile Internet: </strong>Mobile internet usage was prevalent across the Middle East, driven by the widespread use of smartphones.</li>
+                <li><strong>Social Media:</strong> Social media platforms had a significant impact on the region, with a high percentage of the population engaging with platforms like Facebook, Instagram, Snapchat, and others.</li>
+                <li><strong>E-commerce:</strong> The e-commerce sector was expanding, with more people in the Middle East turning to online shopping.</li>
+                <li><strong>Internet Speeds: </strong> Internet speeds varied across the region, with some countries having faster and more reliable connections than others.</li>
             </ol>
-            <p>This entire process occurs within a fraction of a second, allowing near-instantaneous communication between two distant points on the planet. Technologies like email, video calls, and instant messaging leverage this global network to connect people worldwide.</p>
         </article>
-		<section id="references">
-			<h3>References:</h3>
-			<ol>
-				<li>How does the internet Work <a href="https://www.cloudflare.com/learning/network-layer/how-does-the-internet-work/" target="_blank">https://www.cloudflare.com/learning/network-layer/how-does-the-internet-work/</a></li>
-				<li>OpenAI ChatGPT <a href="https://chat.openai.com/" target="_blank">https://chat.openai.com/</a></li>
-			</ol>
-		</section>
 	</main>
 
 	<footer>

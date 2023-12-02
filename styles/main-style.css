@@ -16,8 +16,7 @@ html{
     width: 10px;
     background: #a7a7a78e;
 }
-  
-/* Styling the scrollbar thumb */
+
 ::-webkit-scrollbar-thumb {
     background: #a7a7a7;
     border: 2px solid #a7a7a78e;
