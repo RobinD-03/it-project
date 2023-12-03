@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/main-style.css">
+	<link rel="stylesheet" href="../styles/schedule-style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <title>WEBDEVS - Home</title>
+</head>
+<body>
+	<div id="overlay"></div>
+	<div id="overlay2"></div>
+    <header>
+		<div id="head-title">WEBDEVS</div>
+		<nav class="nav-links" id="main-nav-links">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Arabic Blog</a></li>
+				<li><a href="pages/portfolio.html">Portfolio</a></li>
+				<li class="active-page"><a href="pages/schedule.html">Schedule</a></li>
+			</ul>
+		</nav>
+		<a id="menu-icon" href="javascript:void(0);">
+			<span  class="material-symbols-outlined">
+				menu
+			</span>
+		</a>
+	</header>
+	<div id="hidden-menu" class="ham-menu-closed">
+		<nav class="nav-links" id="menu-nav-links">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Arabic Blog</a></li>
+				<li><a href="pages/portfolio.html">Portfolio</a></li>
+				<li class="active-page-hidden"><a href="pages/schedule.html">Schedule</a></li>
+			</ul>
+		</nav>
+	</div>
+	<button id="side-button" onclick="toggle_sidebar()"><i class="fa-solid fa-chevron-right"></i></button>
+	<div class="sidebar sidebar-close">
+		<ul>
+			<li id="back-home"><a href="../index.html">Back Home</a></li>
+		</ul>
+	</div>
+	<main>
+		<h1>Our Weekly Schedule</h1>
+		<table>
+			<tr>
+				<th>Time</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>
+				<th>Sunday</th>
+			</tr>
+			<tr>
+				<th>8:00 - 9:15</th>
+				<td>Computer Networks</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>Computer Networks</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>9:30 - 10:45</th>
+				<td>>Internet Technology</td>
+				<td>Data Structures and Algorithms</td>
+				<td></td>
+				<td>Data Structures and Algorithms</td>
+				<td>Internet Technology</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>11:00 - 12:15</th>
+				<td>Differential Equations</td>
+				<td>Religious Sciences</td>
+				<td></td>
+				<td>Religious Sciences</td>
+				<td>Differential Equations</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>12:50 - 1:20</th>
+				<td>Differential Equations</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</main>
+
+	<div id="classInfo" class="hidden-class">
+		<button onclick="closeInfo()" id="close-button">
+			X
+		</button>
+	</div>
+
+	<footer>
+		copyright &copy;2023, All Rights Reserved
+	</footer>
+
+	<a id="return-to-top" href="#">
+		<span class="material-symbols-outlined">
+			arrow_upward
+		</span>
+	</a>
+
+	<script src="https://kit.fontawesome.com/9c8069e5f8.js" crossorigin="anonymous"></script>
+	<script src="../scripts/mainApp.js"></script>
+</body>
+</html>
