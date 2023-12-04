@@ -79,7 +79,7 @@
     font-size: 10rem !important;
 }
 
-#about-button{
+.about-button{
     font-size: 1rem;
     padding: 1rem;
     border: 1px solid black;
@@ -90,7 +90,7 @@
     text-decoration: none;
 }
 
-#about-button:hover, #about-button:focus{
+.about-button:hover, .about-button:focus{
     box-shadow: 3px 3px 10px #b8b7b7;
 }
 
@@ -100,7 +100,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
 }
 
 #read-section h2{
@@ -162,6 +161,41 @@
     border-radius: 1rem;
 }
 
+#quiz-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    
+}
+
+#quiz-section h2{
+    width: 80%;
+    text-align: center;
+}
+
+
+#quiz-wrapper{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quiz-wrapper div{
+    width: 70%;
+    text-align: justify;
+}
+
+#assignment{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem !important;
+}
+
 @keyframes glow {
     from {
         box-shadow: 0 0 50px -15px #b8b7b7;
@@ -215,5 +249,12 @@
 
     #articles article{
         min-height: 30rem;
+    }
+
+    #quiz-wrapper div{
+        width: 100%;
+    }
+    #assignment{
+        display: none;
     }
 }

@@ -24,6 +24,7 @@ th, td {
     border: 1px solid black;
     padding: 12px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 th {
@@ -32,6 +33,19 @@ th {
 
 th:first-child{
     width:25%;
+}
+
+.full{
+  /* On "top" */
+  background: repeating-linear-gradient(
+        -55deg,
+        #4d4d4d,
+        #4d4d4d 10px,
+        #585858 10px,
+        #585858 20px
+    );
+    color: white;
+    font-weight: bold;
 }
 
 #classInfo{
