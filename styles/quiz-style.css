@@ -1,0 +1,43 @@
+main{
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+#form{
+    margin: 3rem 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 80%;
+    background: rgba(220, 220, 220, 0.479);
+    backdrop-filter: blur(30px);
+}
+
+h2{
+    text-align: center;
+}
+
+.form-button{
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+    width: auto;
+    padding: 1rem;
+    font-size: 1rem;
+    float: right;
+    margin: 1rem;
+    width: 7rem;
+}
+
+input{
+    cursor: pointer;
+}
+
+@media only screen and (max-width:768px){
+    .form-button{
+        float: left;
+    }
+}

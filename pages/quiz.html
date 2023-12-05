@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/main-style.css">
+	<link rel="stylesheet" href="../styles/quiz-style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <title>WEBDEVS</title>
+</head>
+<body>
+	<div id="overlay"></div>
+    <header>
+		<div id="head-title">WEBDEVS</div>
+		<nav class="nav-links" id="main-nav-links">
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="#">Arabic Blog</a></li>
+				<li><a href="pages/portfolio.html">Portfolio</a></li>
+				<li><a href="pages/schedule.html">Schedule</a></li>
+                <li class="active-page"><a href="../pages/quiz.html">Quiz</a></li>
+			</ul>
+		</nav>
+		<a id="menu-icon" href="javascript:void(0);">
+			<span  class="material-symbols-outlined">
+				menu
+			</span>
+		</a>
+	</header>
+	<div id="hidden-menu" class="ham-menu-closed">
+		<nav class="nav-links" id="menu-nav-links">
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="#">Arabic Blog</a></li>
+				<li><a href="../pages/portfolio.html">Portfolio</a></li>
+				<li><a href="../pages/schedule.html">Schedule</a></li>
+                <li class="active-page-hidden"><a href="../pages/quiz.html">Quiz</a></li>
+			</ul>
+		</nav>
+	</div>
+	<main>
+		<div id="form">
+			<h2>Programming Quiz</h2>
+			<form id="myForm">
+				<label>What does HTML stand for?</label><br>
+				<input type="radio" name="html" id="hyper" value="correct">
+				<label for="hyper">Hyper Text Markup Language</label><br>
+				<input type="radio" name="html" id="ladies" value="wrong">
+				<label for="ladies">Hyper To Meet Ladies</label><br>
+				<input type="radio" name="html" id="hasta" value="wrong">
+				<label for="hasta">Hasta La Vista Markup!</label><br><br>
+				
+
+				<label>Which of the following languages are used for the frontend?</label><br>
+				<input type="checkbox" name="frontend" id="html" value="html">
+				<label for="html">HTML</label><br>
+				<input type="checkbox" name="frontend" id="css" value="css">
+				<label for="css">CSS</label><br>
+				<input type="checkbox" name="frontend" id="js" value="javascript">
+				<label for="js">JavaScript</label><br>
+				<input type="checkbox" name="frontend" id="php" value="php">
+				<label for="php">PHP</label><br><br>
+
+				<label>Who's the creator of Python</label><br>
+				<input type="radio" name="py" id="tesla" value="wrong">
+				<label for="tesla">Nikola Tesla</label><br>
+				<input type="radio" name="py" id="bell" value="wrong">
+				<label for="bell">Alexander Graham-Bell</label><br>
+				<input type="radio" name="py" id="guido" value="correct">
+				<label for="guido">Guido Van Rossum</label><br>
+				<input type="radio" name="py" id="elon" value="wrong">
+				<label for="elon">Elon Musk</label><br><br>
+
+				<label>What year did C++ first appear?</label><br>
+				<input type="radio" name="c++" id="1948" value="wrong">
+				<label for="1948">1948</label><br>
+				<input type="radio" name="c++" id="1985" value="correct">
+				<label for="1985">1985</label><br>
+				<input type="radio" name="c++" id="2000" value="wrong">
+				<label for="2000">2000</label><br>
+				<input type="radio" name="c++" id="2020" value="wrong">
+				<label for="2020">2020</label><br><br>
+
+				<label>Which of these RDBMS use SQL?</label><br>
+				<input type="checkbox" name="sql" id="mysql" value="mysql">
+				<label for="mysql">MySQL</label><br>
+				<input type="checkbox" name="frontend" id="maria" value="maria">
+				<label for="maria">MariaDB</label><br>
+				<input type="checkbox" name="frontend" id="mongo" value="mongo">
+				<label for="mongo">MongoDB</label><br>
+				<input type="checkbox" name="frontend" id="oracle" value="oracle">
+				<label for="oracle">Oracle</label><br><br>
+
+				<label>What langauge is the most popular for backend development in the recent years?</label><br>
+				<input type="radio" name="backend" id="python" value="correct">
+				<label for="python">Python</label><br>
+				<input type="radio" name="backend" id="ruby" value="wrong">
+				<label for="ruby">Ruby</label><br>
+				<input type="radio" name="backend" id="csharp" value="wrong">
+				<label for="csharp">C#</label><br>
+				<input type="radio" name="backend" id="golang" value="wrong">
+				<label for="golang">Golang</label><br><br>
+
+				<button class="form-button" id="submit-button" type="button" onclick="submitQuiz()">Submit</button>
+				<button class="form-button" id="reset-button" type="button" onclick="resetQuiz()">Reset</button>
+			</form>
+		</div>
+	</main>
+
+	<footer>
+		<p>copyright &copy;2023, All Rights Reserved</p>
+	</footer>
+
+	<a id="return-to-top" href="#">
+		<span class="material-symbols-outlined">
+			arrow_upward
+		</span>
+	</a>
+
+	<script src="https://kit.fontawesome.com/9c8069e5f8.js" crossorigin="anonymous"></script>
+	<script src="../scripts/mainApp.js"></script>
+	<script src="../scripts/form.js"></script>
+</body>
+</html>
