@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../styles/main-style.css">
-	<link rel="stylesheet" href="../styles/schedule-style.css">
+	<link rel="stylesheet" href="../styles/contact-style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <title>WEBDEVS</title>
 </head>
@@ -18,7 +18,9 @@
 				<li><a href="../index.html">Home</a></li>
 				<li><a href="#">Arabic Blog</a></li>
 				<li><a href="../pages/portfolio.html">Portfolio</a></li>
-				<li class="active-page"><a href="../pages/schedule.html">Schedule</a></li>
+				<li><a href="../pages/schedule.html">Schedule</a></li>
+                <li><a href="../pages/quiz.html">Quiz</a></li>
+                <li class="active-page"><a href="../pages/contact.html">Contact Us</a></li>
 			</ul>
 		</nav>
 		<a id="menu-icon" href="javascript:void(0);">
@@ -44,52 +46,26 @@
 		</ul>
 	</div>
 	<main>
-		<h1>Our Weekly Schedule</h1>
-		<table>
-			<tr>
-				<th>Time</th>
-				<th>Monday</th>
-				<th>Tuesday</th>
-				<th>Wednesday</th>
-				<th>Thursday</th>
-				<th>Friday</th>
-				<th>Saturday</th>
-				<th>Sunday</th>
-			</tr>
-			<tr>
-				<th>8:00 - 9:15</th>
-				<td>Computer Networks</td>
-				<td></td>
-				<td rowspan="4" class="full">OFF DAY</td>
-				<td></td>
-				<td>Computer Networks</td>
-				<td rowspan="4" colspan="2" class="full">WEEKEND</td>
-
-			</tr>
-			<tr>
-				<th>9:30 - 10:45</th>
-				<td>Internet Technology</td>
-				<td>Data Structures and Algorithms</td>
-				<td>Data Structures and Algorithms</td>
-				<td>Internet Technology</td>
-			</tr>
-			<tr>
-				<th>11:00 - 12:15</th>
-				<td>Differential Equations</td>
-				<td>Religious Sciences</td>
-				
-				<td>Religious Sciences</td>
-				<td>Differential Equations</td>
-			</tr>
-			<tr>
-				<th>12:50 - 1:20</th>
-				<td>Differential Equations</td>
-				<td></td>
-				
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
+        <div id="description">
+            <h1>Contact Us</h1>
+            <p>Let's get in touch, in case you're facing problems or just want some advice, we're here to help!</p>
+        </div>
+        <div id="form-div">
+            <form action="../pages/contact.php" method="post">
+                <label for="fname">First name:</label><br>
+                <input type="text" name="fname" id="fname" required><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" name="lname" id="lname" required><br>
+                <label for="mail">E-Mail:</label><br>
+                <input type="email" name="mail" id="mail" required><br>
+                <label for="desc">Description</label><br>
+                <textarea name="desc" id="desc" placeholder="What is the problem you're facing?"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+            <span id="contact-icon" class="material-symbols-outlined">
+                connect_without_contact
+            </span>
+        </div>
 	</main>
 
 	<footer>

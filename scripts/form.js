@@ -45,13 +45,14 @@ function submitQuiz() {
 
     // Check the fifth question (RDBMS with SQL)
     let sqlOptions = document.getElementsByName('sql');
+    let correctValues = ["maria", "mysql", "oracle"];
     let sqlChecked = false;
     for (let i = 0; i < sqlOptions.length; i++) {
-        if (sqlOptions[i].checked) {
-            sqlChecked = true;
-        } else {
+        if ((sqlOptions[i].checked && sqlOptions[i].value === "mongo") || (!sqlOptions[i].checked && sqlOptions[i].value === "maria") || (!sqlOptions[i].checked && sqlOptions[i].value === "mysql") || (!sqlOptions[i].checked && sqlOptions[i].value === "oracle")) {
             sqlChecked = false;
-            break; // Break if any checkbox is unchecked
+            break;
+        } else {
+            sqlChecked = true;
         }
     }
     if (sqlChecked) {
@@ -68,7 +69,7 @@ function submitQuiz() {
     }
 
     // Display the result
-    alert('Your score is: ' + score + ' out of 6');
+    window.location.href = '../pages/results/calculated.html?score=' + score;
 }
 
 function resetQuiz() {
