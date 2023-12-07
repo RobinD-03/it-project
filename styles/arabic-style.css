@@ -1,0 +1,22 @@
+main{
+    font-family:'Arial' !important;
+}
+
+p{
+    text-align: right;
+}
+
+ol{
+    direction: rtl;
+    text-align: right;
+}
+
+#references ol{
+    direction: ltr;
+    text-align: left;
+}
+
+
+#communication ol li{
+    text-align: start;
+}

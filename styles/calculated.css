@@ -1,0 +1,129 @@
+main
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#results{
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+#progress-bar{
+    height: 300px;
+    width: 300px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+}
+
+#middle{
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px rgba(255,255,255,1), 0.5px 0.5px 0px rgba(0,0,0,0.15), 0px 12px 10px -10px rgba(0,0,0,0.05);
+}
+
+#number{
+    font-weight: 600;
+    font-size: 4rem;
+    color: #555;
+}
+
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 30px;
+    stroke-dasharray: 850;
+    stroke-dashoffset: 0;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes anim100{
+    0%{
+        stroke-dashoffset: 850;
+    }
+}
+
+@keyframes anim83{
+    0%{
+        stroke-dashoffset: 850;
+    }
+    100%{
+        stroke-dashoffset: 145;
+    }
+}
+
+@keyframes anim67{
+    0%{
+        stroke-dashoffset: 850;
+    }
+    100%{
+        stroke-dashoffset: 280;
+    }
+}
+
+@keyframes anim50{
+    0%{
+        stroke-dashoffset: 850;
+    }
+    100%{
+        stroke-dashoffset: 425;
+    }
+}
+
+@keyframes anim33{
+    0%{
+        stroke-dashoffset: 850;
+    }
+    100%{
+        stroke-dashoffset: 570;
+    }
+}
+
+@keyframes anim17{
+    0%{
+        stroke-dashoffset: 850;
+    }
+    100%{
+        stroke-dashoffset: 705;
+    }
+}
+
+@keyframes anim0{
+    0%{
+        stroke-dashoffset: 850;
+    }
+    100%{
+        stroke-dashoffset: 850;
+    }
+}
+
+#inspiration{
+    width: 60%;
+    margin:1rem 0;
+    
+}
+
+@media only screen and (max-width:768px){
+    #inspiration{
+        width: 80%;
+    }
+}

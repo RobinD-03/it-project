@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/main-style.css">
+	<link rel="stylesheet" href="../styles/articles-pages.css">
+	<link rel="stylesheet" href="../styles/arabic-style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <title>WEBDEVS</title>
+</head>
+<body>
+	<div id="overlay"></div>
+    <header>
+		<div id="head-title">WEBDEVS</div>
+		<nav class="nav-links" id="main-nav-links">
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+				<li class="active-page"><a href="../pages/arabic.html">Arabic Blog</a></li>
+				<li><a href="../pages/portfolio.html">Portfolio</a></li>
+				<li><a href="../pages/schedule.html">Schedule</a></li>
+                <li><a href="../pages/quiz.html">Quiz 1</a></li>
+				<li><a href="../pages/quiz2.html">Quiz 2</a></li>
+                <li><a href="../pages/contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		<a id="menu-icon" href="javascript:void(0);">
+			<span  class="material-symbols-outlined">
+				menu
+			</span>
+		</a>
+	</header>
+	<div id="hidden-menu" class="ham-menu-closed">
+		<nav class="nav-links" id="menu-nav-links">
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+				<li class="active-page-hidden"><a href="../pages/arabic.html">Arabic Blog</a></li>
+				<li><a href="../pages/portfolio.html">Portfolio</a></li>
+				<li><a href="../pages/schedule.html">Schedule</a></li>
+                <li><a href="../pages/quiz.html">Quiz 1</a></li>
+				<li><a href="../pages/quiz2.html">Quiz 2</a></li>
+                <li><a href="../pages/contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</div>
+	<button id="side-button" onclick="toggle_sidebar()"><i class="fa-solid fa-chevron-right"></i></button>
+	<div class="sidebar sidebar-close">
+		<ul>
+			<li><a href="#definition">ما هو التزييف العميق</a></li>
+			<li><a href="#beginning">كيف تعمل تقنية التزييف العميق</a></li>
+			<li><a href="#communication">كيف يهدد التزييف العميق عالمنا الرقمي</a></li>
+			<li><a href="#references">المراجع</a></li>
+			<li id="back-home"><a href="../index.html">عودة</a></li>
+		</ul>
+	</div>
+	<main>
+		<h1>التزييف العميق وخطر التضليل: تهديد جديد يواجه عالمنا الرقمي</h1>
+		<article class="change-back" id="definition">
+			<h2>ما هو التزييف العميق؟</h2>
+			<p>التزييف العميق هو تقنية تستخدم الذكاء الاصطناعي لتوليد محتويات رقمية مزيفة، مثل مقاطع الفيديو والصور، تبدو وكأنها حقيقية. يمكن لهذه التقنية أن تُستخدم لتزييف الأصوات والوجوه والجركات، مما يجعل من الصعب للغاية التمييز بين المحتوى الحقيقي والمزيف.</p>
+		</article>
+		<article id="beginning">
+			<h2>كيف تعمل تقنية التزييف العميق؟</h2>
+			<p dir="rtl">
+				تعتمد تقنية التزييف العميق على نوع من الذكاء الاصطناعي يسمى "الشبكات العصبية التلافيفية" (Convolutional Neural Networks). يتم تدريب هذه الشبكات على كميات هائلة من البيانات، مثل الصور ومقاطع الفيديو، لتعلم كيفية التعرف على الأنماط والتشابهات بين هذه البيانات.
+			  
+				بمجرد تدريب الشبكة العصبية، يمكن استخدامها لإنشاء محتوى مزيف جديد. يتم ذلك من خلال تزويد الشبكة بـ"صورة هدف" (Target Image)، وهي الصورة التي نريد تزويرها، و"صورة مصدر" (Source Image)، وهي الصورة التي نريد استعارة ملامحها.
+			  
+				تقوم الشبكة العصبية بعد ذلك بتحليل كلتا الصورتين وتتعلم كيفية رسم خريطة بينهما. ثم تستخدم هذه الخريطة لتوليد صورة جديدة تجمع بين ملامح الصورة المصدر والهيكل العام للصورة الهدف.
+			  
+				على سبيل المثال، يمكن استخدام التزييف العميق لتوليد مقطع فيديو يظهر فيه شخص ما يقول شيئًا لم يقله بالفعل. يتم ذلك عن طريق تدريب الشبكة العصبية على كمية هائلة من مقاطع الفيديو للشخص الذي نريد تزويره. ثم يتم استخدام هذه الشبكة لإنشاء مقطع فيديو جديد يظهر فيه الشخص يقول الكلمات التي نريدها.
+			</p>
+			  
+			<figure>
+				<img src="../images/deepfakeimage.jpg" alt="TomCruise-DeepFake">
+			</figure>
+			<p id="caption"></p>
+		</article>
+        <article id="communication">
+            <h2>كيف يهدد التزييف العميق عالمنا الرقمي؟</h2>
+            <p>يُشكل التزييف العميق تهديدًا خطيرًا لعدة أسباب</p>
+            <ol dir="rtl">
+                <li><strong>تضليل الرأي العام:</strong> يمكن استخدام التزييف العميق لتشويه سمعة الأفراد والمنظمات، ونشر معلومات خاطئة، والتأثير على الرأي العام</li>
+                <li><strong>تقويض الثقة في وسائل الإعلام:</strong> مع انتشار التزييف العميق، قد يصبح من الصعب على الناس تمييز الأخبار الحقيقية من الأخبار المزيفة، مما يؤدي إلى تقويض الثقة في وسائل الإعلام التقليدية</li>
+                <li><strong>التلاعب بالأسواق:</strong> يمكن استخدام التزييف العميق للتلاعب بالأسواق المالية من خلال نشر معلومات مضللة عن أداء الشركات</li>
+                <li><strong>التأثير على الانتخابات:</strong>  يمكن استخدام التزييف العميق للتأثير على نتائج الانتخابات من خلال تشويه سمعة المرشحين ونشر معلومات خاطئة</li>
+            </ol>
+            <p>التزييف العميق هو تحد كبير يواجه عالمنا الرقمي. ولكن من خلال التوعية والتعاون والابتكار، يمكننا مواجهة هذا التحدي وحماية مجتمعاتنا من مخاطر التضليل</p>
+        </article>
+		<section id="references">
+			<h3>المراجع</h3>
+			<ol>
+				<li>Deepfakes and Disinformation: Exploring the Impact of Synthetic Political Video on Deception, Uncertainty, and Trust in News <a href="https://journals.sagepub.com/doi/10.1177/2056305120903408" target="_blank">https://journals.sagepub.com/doi/10.1177/2056305120903408</a></li>
+				<li>Deepfakes: Polity Books <a href="https://www.politybooks.com/blog-detail/deepfakes" target="_blank">https://www.politybooks.com/blog-detail/deepfakes</a></li>
+			</ol>
+		</section>
+	</main>
+
+	<footer>
+		copyright &copy;2023, All Rights Reserved
+	</footer>
+
+	<a id="return-to-top" href="#">
+		<span class="material-symbols-outlined">
+			arrow_upward
+		</span>
+	</a>
+
+	<script src="https://kit.fontawesome.com/9c8069e5f8.js" crossorigin="anonymous"></script>
+	<script src="../scripts/mainApp.js"></script>
+</body>
+</html>
