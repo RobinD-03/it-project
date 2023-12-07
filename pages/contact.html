@@ -21,6 +21,7 @@
 				<li><a href="../pages/schedule.html">Schedule</a></li>
                 <li><a href="../pages/quiz.html">Quiz 1</a></li>
 				<li><a href="../pages/quiz2.html">Quiz 2</a></li>
+				<li><a href="../pages/media.html">Media</a></li>
                 <li class="active-page"><a href="../pages/contact.html">Contact Us</a></li>
 			</ul>
 		</nav>
@@ -39,6 +40,7 @@
 				<li><a href="../pages/schedule.html">Schedule</a></li>
                 <li><a href="../pages/quiz.html">Quiz 1</a></li>
 				<li><a href="../pages/quiz2.html">Quiz 2</a></li>
+				<li><a href="../pages/media.html">Media</a></li>
                 <li class="active-page-hidden"><a href="../pages/contact.html">Contact Us</a></li>
 			</ul>
 		</nav>
@@ -55,15 +57,15 @@
             <p>Let's get in touch, in case you're facing problems or just want some advice, we're here to help!</p>
         </div>
         <div id="form-div">
-            <form action="../pages/contact.php" method="post">
+            <form name="myForm" action="../pages/contact.php" method="post" onsubmit="validateForm(event)">
                 <label for="fname">First name:</label><br>
-                <input type="text" name="fname" id="fname" required><br>
+                <input type="text" name="fname" id="fname"><span id="fnamespan">*</span><br>
                 <label for="lname">Last name:</label><br>
-                <input type="text" name="lname" id="lname" required><br>
+                <input type="text" name="lname" id="lname"><span id="lnamespan">*</span><br>
                 <label for="mail">E-Mail:</label><br>
-                <input type="email" name="mail" id="mail" required><br>
+                <input type="email" name="mail" id="mail"><span id="emailspan">*</span><br>
                 <label for="desc">Description</label><br>
-                <textarea name="desc" id="desc" placeholder="What is the problem you're facing?"></textarea><br>
+                <textarea name="desc" id="desc" placeholder="What is the problem you're facing?"></textarea><span id="textspan">*</span><br>
                 <button type="submit">Submit</button>
             </form>
             <span id="contact-icon" class="material-symbols-outlined">
@@ -84,5 +86,50 @@
 
 	<script src="https://kit.fontawesome.com/9c8069e5f8.js" crossorigin="anonymous"></script>
 	<script src="../scripts/mainApp.js"></script>
+	<script>
+		function validateForm(event) {
+            event.preventDefault();
+
+            const fname = document.forms["myForm"]["fname"].value;
+            const lname = document.forms["myForm"]["lname"].value;
+            const email = document.forms["myForm"]["mail"].value;
+            const desc = document.forms["myForm"]["desc"].value;
+			const fspan = document.getElementById('fnamespan');
+			const lspan = document.getElementById('lnamespan');
+			const espan = document.getElementById('emailspan');
+			const dspan = document.getElementById('textspan');
+
+            if (fname === "") {
+				fspan.style.color = "red";
+				return;
+			} else {
+				fspan.style.color = "black";
+			}
+
+			if (lname === "") {
+				lspan.style.color = "red";
+				return;
+			} else {
+				lspan.style.color = "black";
+			}
+
+			if (email === "") {
+				espan.style.color = "red";
+				return;
+			} else {
+				espan.style.color = "black";
+			}
+
+			if (desc === "") {
+				dspan.style.color = "red";
+				return;
+			} else {
+				dspan.style.color = "black";
+			}
+
+			document.forms["myForm"].submit();
+        }
+
+	</script>
 </body>
 </html>

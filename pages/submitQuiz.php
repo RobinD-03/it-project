@@ -6,20 +6,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $score++;
     }
 
-    $frontendChecked = false;
-
-    foreach ($_POST['frontend'] as $selectedOption) {
-        if (($selectedOption === "php") || ($selectedOption === "html") || ($selectedOption === "javascript") || ($selectedOption === "css")) {
-            $frontendChecked = true;
-        } else {
-            $frontendChecked = false;
-            break;
+    $frontendChecked = true;
+    $correctFrontEndValues = ["html", "css", "javascript"];
+    if (isset($_POST['frontend']) && is_array($_POST['frontend'])){
+        foreach ($correctFrontEndValues as $correctFValue) {
+            if (!in_array($correctFValue, $_POST['frontend'])) {
+                $frontendChecked = false;
+                break;
+            }
         }
     }
+    
 
-if ($frontendChecked) {
-    $score++;
-}
+    if ($frontendChecked) {
+        $score++;
+    }
 
 
     if ($_POST['py'] === 'correct') {
@@ -31,16 +32,16 @@ if ($frontendChecked) {
     }
 
     $correctValues = ["maria", "mysql", "oracle"];
-    $sqlChecked = false;
-
-    foreach ($_POST['sql'] as $selectedOption) {
-        if (($selectedOption === "mongo") || ($selectedOption === "maria") || ($selectedOption === "mysql") || ($selectedOption === "oracle")) {
-            $sqlChecked = false;
-            break;
-        } else {
-            $sqlChecked = true;
+    $sqlChecked = true;
+    if (isset($_POST['sql']) && is_array($_POST['sql'])){
+        foreach ($correctValues as $correctValue) {
+            if (!in_array($correctValue, $_POST['sql'])) {
+                $sqlChecked = false;
+                break;
+            }
         }
     }
+    
 
     if ($sqlChecked) {
         $score++;

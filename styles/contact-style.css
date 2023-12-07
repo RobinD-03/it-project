@@ -14,6 +14,7 @@ main{
     justify-content: center;
     flex-direction: column;
     margin-bottom: 2rem;
+    padding: .5rem;
 }
 
 
@@ -47,6 +48,45 @@ input{
     height: 2rem;
 }
 
-input[type="button"]{
+button{
     cursor: pointer;
+    border: 1px solid gray;
+    padding: 1rem;
+    background-color: white;
+    transition: all .3s linear;
+}
+
+input{
+    margin-bottom: .5rem;
+}
+
+button:hover, button:focus{
+    box-shadow: 3px 3px 10px #b8b7b7;
+}
+
+#form-div form span{
+    font-size: 2rem;
+}
+
+@media only screen and (max-width:1000px) {
+    #form-div{
+        flex-direction: column;
+    }
+    form{
+        width:60%;
+        border: none;
+    }
+
+    form input{
+        width: 90%;
+    }
+    textarea{
+        min-width: 90%;
+        max-width: 90%;
+        min-height: 5rem;
+    }
+    #contact-icon{
+        order: -1;
+        margin: 0;
+    }
 }

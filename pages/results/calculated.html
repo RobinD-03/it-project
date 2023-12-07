@@ -21,6 +21,7 @@
 				<li><a href="../../pages/schedule.html">Schedule</a></li>
 				<li><a href="../../pages/quiz.html">Quiz 1</a></li>
 				<li><a href="../../pages/quiz2.html">Quiz 2</a></li>
+				<li><a href="../../pages/media.html">Media</a></li>
                 <li><a href="../../pages/contact.html">Contact Us</a></li>
 			</ul>
 		</nav>
@@ -39,6 +40,7 @@
 				<li><a href="../../pages/schedule.html">Schedule</a></li>
 				<li><a href="../../pages/quiz.html">Quiz 1</a></li>
 				<li><a href="../../pages/quiz2.html">Quiz 2</a></li>
+				<li><a href="../../pages/media.html">Media</a></li>
                 <li><a href="../../pages/contact.html">Contact Us</a></li>
 			</ul>
 		</nav>
@@ -107,7 +109,7 @@
 				number.innerHTML = `${counter}%`;
 			}
 			
-		},20)
+		},10)
 
 		const circles = document.getElementsByTagName('circle');
 		const circle = circles[0]
