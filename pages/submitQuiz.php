@@ -6,20 +6,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $score++;
     }
 
-    $correctFrontEndValues = ["html", "css", "javascript"];
+    $correctBackendValues = ["php", "python", "ruby"];
+    $backendChecked = true;  // Assume all correct backend values are checked initially
 
-    if (isset($_POST['frontend']) && is_array($_POST['frontend'])){
-        $checkedValues = $_POST['frontend'];
-        $checkedCount = 0;
-    
-        foreach ($correctFrontEndValues as $correctFValue) {
-            if (in_array($correctFValue, $checkedValues)) {
-                $checkedCount++;
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        
+        if (isset($_POST['backend']) && is_array($_POST['backend'])) {
+            $checkedValues = $_POST['backend'];
+
+            foreach ($correctBackendValues as $correctBValue) {
+                if (!in_array($correctBValue, $checkedValues)) {
+                    $backendChecked = false;  // If any correct backend value is missing, set $backendChecked to false
+                    break;  // No need to continue checking once a missing correct backend value is found
+                }
             }
+        } else {
+            $backendChecked = false;  // If $_POST['backend'] is not an array, set $backendChecked to false
         }
-    
-        if ($checkedCount === count($correctFrontEndValues)) {
-            $score++; 
+
+        if ($backendChecked) {
+            $score++;
         }
     }
 
@@ -35,21 +41,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $correctValues = ["maria", "mysql", "oracle"];
+    $sqlChecked = true;  // Assume all correct values are checked initially
 
-
-    if (isset($_POST['sql']) && is_array($_POST['sql'])){
-        $checkedValues = $_POST['sql'];
-        $checkedCount = 0;
-
+    if (isset($_POST['sql']) && is_array($_POST['sql'])) {
         foreach ($correctValues as $correctValue) {
-            if (in_array($correctValue, $checkedValues)) {
-                $checkedCount++;
+            if (!in_array($correctValue, $_POST['sql'])) {
+                $sqlChecked = false;
+                break; 
             }
         }
+    } else {
+        $sqlChecked = false;
+    }
 
-        if ($checkedCount === count($correctValues)) {
-            $score++;
-        }
+    if ($sqlChecked) {
+        $score++;
     }
 
 
