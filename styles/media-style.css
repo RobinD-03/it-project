@@ -138,5 +138,10 @@ audio{
     iframe{
         max-width: 80%;
     }
+
+    .imgs img{
+      width: 300px;
+      height: 187.5px;
+    }
 }
 
