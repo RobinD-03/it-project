@@ -6,18 +6,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $score++;
     }
 
-    $frontendChecked = true;
     $correctFrontEndValues = ["html", "css", "javascript"];
 
     if (isset($_POST['frontend']) && is_array($_POST['frontend'])){
+        $checkedValues = $_POST['frontend'];
+        $checkedCount = 0;
+    
         foreach ($correctFrontEndValues as $correctFValue) {
-            if (!in_array($correctFValue, $_POST['frontend'])) {
-                $frontendChecked = false;
-                break;
+            if (in_array($correctFValue, $checkedValues)) {
+                $checkedCount++;
             }
         }
-        if ($frontendChecked) {
-            $score++;
+    
+        if ($checkedCount === count($correctFrontEndValues)) {
+            $score++; 
         }
     }
 
@@ -33,15 +35,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $correctValues = ["maria", "mysql", "oracle"];
-    $sqlChecked = true;
+
+
     if (isset($_POST['sql']) && is_array($_POST['sql'])){
+        $checkedValues = $_POST['sql'];
+        $checkedCount = 0;
+
         foreach ($correctValues as $correctValue) {
-            if (!in_array($correctValue, $_POST['sql'])) {
-                $sqlChecked = false;
-                break;
+            if (in_array($correctValue, $checkedValues)) {
+                $checkedCount++;
             }
         }
-        if ($sqlChecked) {
+
+        if ($checkedCount === count($correctValues)) {
             $score++;
         }
     }
