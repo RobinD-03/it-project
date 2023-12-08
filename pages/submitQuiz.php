@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $frontendChecked = true;
     $correctFrontEndValues = ["html", "css", "javascript"];
+
     if (isset($_POST['frontend']) && is_array($_POST['frontend'])){
         foreach ($correctFrontEndValues as $correctFValue) {
             if (!in_array($correctFValue, $_POST['frontend'])) {
@@ -15,12 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 break;
             }
         }
+        if ($frontendChecked) {
+            $score++;
+        }
     }
-    
 
-    if ($frontendChecked) {
-        $score++;
-    }
+    
 
 
     if ($_POST['py'] === 'correct') {
@@ -40,11 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 break;
             }
         }
-    }
-    
-
-    if ($sqlChecked) {
-        $score++;
+        if ($sqlChecked) {
+            $score++;
+        }
     }
 
 
